@@ -1,0 +1,350 @@
+<!--
+  ============================================================================
+  FABRICATED EXHIBIT — NOT A REAL FREEDOM OF INFORMATION REQUEST.
+  This page is an out-of-world teaching exhibit for the Conspiracy LARP
+  Dungeon Master's Guide. It is ORIGINAL HTML/CSS written from scratch to
+  emulate the general look of a WhatDoTheyKnow (mySociety) FOI request page —
+  the reddish/maroon wordmark banner, top nav, request title, the
+  "[Name] made this request to [Authority]" line, a status label, and a
+  two-message correspondence thread. NONE of WhatDoTheyKnow's markup or CSS
+  was copied; only the general chrome is imitated, and no real request's text
+  is reproduced.
+  The request below is entirely invented. No such request was ever filed;
+  WhatDoTheyKnow has never heard of it. There is no "A. Hollis" request and no
+  "Directorate of Reading Standards." See the visible notice near the top.
+  (This is a Glomar "neither confirm nor deny" response: nothing is disclosed,
+  so there are deliberately NO redaction bars anywhere on the page.)
+  ============================================================================
+-->
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directorate of Reading Standards: file series and current status - a Freedom of Information request to Ministry of Defence - WhatDoTheyKnow</title>
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #f3f1eb;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  a { color: #0b6d94; }
+  a:hover { color: #094f6c; }
+
+  /* ---- Banner / wordmark ------------------------------------------------- */
+  #banner {
+    background: #93170b;   /* WhatDoTheyKnow deep red */
+    border-bottom: 3px solid #6e1108;
+  }
+  .banner-inner {
+    max-width: 62em;
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 56px;
+  }
+  #logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    padding: 10px 0;
+    margin-right: auto;
+  }
+  #logo:hover { color: #ffffff; text-decoration: none; }
+  #logo .know { color: #ffd9a8; }
+  .banner-search {
+    margin: 0 0 0 14px;
+  }
+  .banner-search input {
+    font-family: inherit;
+    font-size: 13px;
+    padding: 5px 8px;
+    width: 150px;
+    border: 1px solid #6e1108;
+    border-radius: 2px;
+    background: #fff;
+    color: #333;
+    vertical-align: middle;
+  }
+  /* top nav bar */
+  #topnav {
+    background: #7f1409;
+  }
+  .topnav-inner {
+    max-width: 62em;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  #topnav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+  #topnav li { margin: 0; }
+  #topnav a {
+    display: block;
+    color: #ffe4d6;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  #topnav a:hover { background: #93170b; color: #fff; }
+
+  /* ---- Page layout ------------------------------------------------------- */
+  #wrap {
+    max-width: 62em;
+    margin: 20px auto 0;
+    padding: 0 18px;
+  }
+  #content {
+    background: #ffffff;
+    border: 1px solid #ddd9cf;
+    border-radius: 3px;
+    padding: 24px 26px 20px;
+  }
+
+  /* fabricated exhibit notice */
+  #fab-notice {
+    margin: 0 auto 16px;
+    max-width: 62em;
+    padding: 10px 14px;
+    background: #fbf3d6;
+    border: 1px solid #d9c98a;
+    color: #6a5a25;
+    font-size: 13px;
+    line-height: 1.45;
+    border-radius: 3px;
+  }
+  #fab-notice strong { color: #5a4a1a; }
+
+  h1.request-title {
+    font-size: 25px;
+    line-height: 1.25;
+    font-weight: bold;
+    color: #222;
+    margin: 0 0 8px;
+  }
+  .request-subtitle {
+    font-size: 15px;
+    color: #555;
+    margin: 0 0 18px;
+  }
+  .request-subtitle a { font-weight: bold; }
+
+  /* ---- Status banner ----------------------------------------------------- */
+  .request-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fdf3e3;
+    border: 1px solid #f0d9b5;
+    border-left: 5px solid #e6a23c;
+    border-radius: 3px;
+    padding: 12px 14px;
+    margin: 0 0 24px;
+    color: #6b4e1e;
+    font-size: 14px;
+  }
+  .request-status .status-icon {
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: #e6a23c;
+    color: #fff;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .request-status strong { color: #5a3f16; }
+
+  /* ---- Correspondence thread -------------------------------------------- */
+  .correspondence {
+    border: 1px solid #e2ded3;
+    border-radius: 3px;
+    margin: 0 0 20px;
+    overflow: hidden;
+  }
+  .correspondence.incoming { border-color: #d6e0e6; }
+  .correspondence__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f6f4ee;
+    border-bottom: 1px solid #e2ded3;
+  }
+  .correspondence.incoming .correspondence__header {
+    background: #eef3f6;
+    border-bottom-color: #d6e0e6;
+  }
+  .avatar {
+    flex: 0 0 auto;
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: #93170b;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    line-height: 34px;
+  }
+  .correspondence.incoming .avatar { background: #33566b; }
+  .correspondence__header__author {
+    font-weight: bold;
+    color: #222;
+    font-size: 15px;
+    margin-right: auto;
+  }
+  .correspondence__header__date {
+    color: #888;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .correspondence__ref {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+  }
+  .correspondence__body {
+    padding: 16px 18px 18px;
+    font-size: 15px;
+    color: #333;
+  }
+  .correspondence__body p { margin: 0 0 12px; }
+  .correspondence__body p:last-child { margin-bottom: 0; }
+
+  /* ---- Footer ------------------------------------------------------------ */
+  #footer {
+    max-width: 62em;
+    margin: 24px auto 40px;
+    padding: 0 18px;
+    color: #8a8676;
+    font-size: 12px;
+  }
+  #footer .footer-inner {
+    border-top: 1px solid #ddd9cf;
+    padding-top: 14px;
+  }
+  #footer a { color: #0b6d94; }
+  #footer .fab-tail {
+    margin-top: 10px;
+    color: #9a927b;
+  }
+
+  @media (max-width: 640px) {
+    .banner-inner { min-height: 0; padding-top: 8px; padding-bottom: 8px; }
+    .banner-search { margin: 8px 0 0; width: 100%; }
+    .banner-search input { width: 100%; }
+    #logo { margin-right: 0; }
+    h1.request-title { font-size: 21px; }
+    .correspondence__header { flex-wrap: wrap; }
+    .correspondence__header__date { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===================== BANNER / WORDMARK ===================== -->
+  <div id="banner" role="banner">
+    <div class="banner-inner">
+      <a id="logo" href="#">What<span>DoThey</span><span class="know">Know</span></a>
+      <form class="banner-search" action="#" onsubmit="return false;" role="search" aria-label="Search (non-functional exhibit chrome)">
+        <input type="search" name="query" placeholder="Search" aria-label="Search WhatDoTheyKnow" autocomplete="off">
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== TOP NAV ===================== -->
+  <nav id="topnav" aria-label="Primary">
+    <div class="topnav-inner">
+      <ul>
+        <li><a href="#">Make a request</a></li>
+        <li><a href="#">Browse requests</a></li>
+        <li><a href="#">View authorities</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Sign in or sign up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== FABRICATED NOTICE ===================== -->
+  <div id="fab-notice">
+    <strong>Fabricated exhibit.</strong> No such request was ever filed &mdash; WhatDoTheyKnow has
+    never heard of it. This is an invented page made for the <em>Conspiracy LARP Dungeon Master's
+    Guide</em>, styled to resemble a WhatDoTheyKnow FOI request. &ldquo;A.&nbsp;Hollis,&rdquo; the
+    &ldquo;Directorate of Reading Standards,&rdquo; and the reference number below are all fiction.
+  </div>
+
+  <!-- ===================== REQUEST ===================== -->
+  <div id="wrap">
+    <div id="content" role="main">
+
+      <h1 class="request-title">Directorate of Reading Standards: file series and current status</h1>
+      <p class="request-subtitle">
+        <a href="#">A. Hollis</a> made this Freedom of Information request to
+        <a href="#">Ministry of Defence</a>
+      </p>
+
+      <div class="request-status">
+        <span class="status-icon" aria-hidden="true">i</span>
+        <span>The status of this request is now <strong>Awaiting internal review</strong>.</span>
+      </div>
+
+      <!-- Message 1: requester (outgoing) -->
+      <div class="correspondence outgoing">
+        <div class="correspondence__header">
+          <span class="avatar" aria-hidden="true">A</span>
+          <span class="correspondence__header__author">A. Hollis</span>
+          <span class="correspondence__header__date">4 March 2024</span>
+        </div>
+        <div class="correspondence__body">
+          <p>Dear Ministry of Defence,</p>
+          <p>Please provide a list of file series held under or referencing the Directorate of
+            Reading Standards (formerly War Office), together with the date of the most recent
+            review.</p>
+          <p>Yours faithfully,</p>
+          <p>A. Hollis</p>
+        </div>
+      </div>
+
+      <!-- Message 2: public body (incoming) — Glomar / neither confirm nor deny -->
+      <div class="correspondence incoming">
+        <div class="correspondence__header">
+          <span class="avatar" aria-hidden="true">M</span>
+          <span class="correspondence__header__author">
+            Ministry of Defence
+            <span class="correspondence__ref">Ref: FOI2024/03841</span>
+          </span>
+          <span class="correspondence__header__date">2 April 2024</span>
+        </div>
+        <div class="correspondence__body">
+          <p>Dear Ms Hollis,</p>
+          <p>The Ministry of Defence can neither confirm nor deny whether it holds information of
+            the description specified in your request, as the duty in section 1(1)(a) of the Act
+            does not apply by virtue of section 23(5).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <div id="footer">
+    <div class="footer-inner">
+      <p>WhatDoTheyKnow is a project of <a href="#">mySociety</a>, a registered charity.
+        &nbsp;|&nbsp; <a href="#">Help</a> &nbsp;|&nbsp; <a href="#">Privacy</a></p>
+      <p class="fab-tail">Out-of-world teaching exhibit &middot; original markup, not copied from
+        WhatDoTheyKnow &middot; Conspiracy LARP guide. This request is fiction and was never filed.</p>
+    </div>
+  </div>
+
+</body>
+</html>
