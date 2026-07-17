@@ -1,0 +1,10 @@
+# https://conspiracy-larp.github.io/robots.txt
+#
+# This is the only robots.txt a crawler will ever read for this origin. A robots.txt
+# in a subdirectory is never fetched, so the guide's own copy cannot advertise its
+# sitemap — that has to happen here.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://conspiracy-larp.github.io/dungeon-masters-guide/sitemap.xml
