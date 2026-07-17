@@ -2,12 +2,13 @@
   ============================================================================
   FABRICATED EXHIBIT — NOT A REAL PARLIAMENTARY RECORD.
   This page is an out-of-world teaching exhibit for the Conspiracy LARP
-  Dungeon Master's Guide. It is an ORIGINAL HTML/CSS recreation that emulates
-  the visual style of the circa-2009 "Historic Hansard" (millbanksystems.com)
-  website. NONE of the markup or CSS was copied from that site; it was written
-  from scratch to imitate the general look only.
+  Dungeon Master's Guide. It is ORIGINAL HTML/CSS written from scratch to
+  emulate the minimal visual style of the circa-2009 "Historic Hansard"
+  (hansard.millbanksystems.com) website — plain white, Lucida Grande
+  sans-serif, a centred reading column. NONE of the archived site's markup or
+  stylesheet was copied; only the general look is imitated.
   The debate below is entirely invented. No such debate ever took place.
-  There is no "Mr. Petherbridge"; the columns, volume and date are fiction.
+  There is no "Mr. Petherbridge"; the citation, columns and volume are fiction.
   See the visible notice in the footer.
   ============================================================================
 -->
@@ -22,343 +23,254 @@
   html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
-    background: #e7e2d4;
-    color: #1a1a1a;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 16px;
-    line-height: 1.5;
+    padding: 0;
+    background: #ffffff;
+    color: #000000;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 81.25%;      /* ~13px base, as period sites did */
+    line-height: 140%;
+  }
+  a { color: #1a4b8c; }
+  a:visited { color: #551a8b; }
+
+  /* Centred ~47.5em columns, matching the real header/content/footer widths */
+  #header, #content, #footer {
+    width: 47.5em;
+    margin: auto;
   }
 
-  /* ---- Masthead ---------------------------------------------------------- */
-  #masthead {
-    background: #6d1a24;
-    background: linear-gradient(#7c1f2a, #5f151e);
-    border-bottom: 3px solid #3d0d13;
-    color: #f3e9d6;
+  /* ---- Header ------------------------------------------------------------ */
+  #header {
+    padding-top: 1em;
   }
-  #masthead-inner {
-    max-width: 47.5em;
-    margin: 0 auto;
-    padding: 14px 18px 12px;
-    position: relative;
+  .search-help {
+    font-size: 85%;
+    text-align: right;
+    margin: 0 0 0.3em;
   }
-  #brand {
-    font-size: 30px;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    line-height: 1.05;
-    margin: 0;
-    color: #ffffff;
-    text-shadow: 0 1px 0 #3d0d13;
-  }
-  #brand .flourish { color: #d9b64e; font-style: italic; font-weight: normal; }
-  #tagline {
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #e3c9a0;
-    margin: 3px 0 0;
-    font-family: Verdana, Geneva, sans-serif;
-  }
-  /* search box (chrome only, non-functional) */
   #search {
-    position: absolute;
-    top: 16px;
-    right: 18px;
-    margin: 0;
+    float: right;
+    margin-left: 0.5em;
+    margin-bottom: 0.4em;
   }
-  #search input[type="text"] {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
-    padding: 4px 6px;
-    width: 150px;
-    border: 1px solid #3d0d13;
-    background: #fbf7ee;
-    color: #333;
+  #search input.query {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 1px 3px;
+    width: 15em;
+    border: 1px solid #7f9db9;   /* the classic 2000s inset blue-grey field */
     vertical-align: middle;
   }
-  #search .btn {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
-    padding: 4px 9px;
-    border: 1px solid #3d0d13;
-    background: #caa74e;
-    background: linear-gradient(#d8b85f, #b9963c);
-    color: #3d0d13;
-    cursor: pointer;
+  #search input.submit {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 1px 6px;
     vertical-align: middle;
   }
-
-  /* ---- Sub-navigation band ---------------------------------------------- */
-  #subnav {
-    background: #f4efe2;
-    border-bottom: 1px solid #c9c0a8;
+  #nav {
+    font-size: 85%;
+    clear: none;
+    padding-top: 0.2em;
   }
-  #subnav-inner {
-    max-width: 47.5em;
-    margin: 0 auto;
-    padding: 7px 18px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11.5px;
-  }
-  #breadcrumb { color: #555; }
-  #breadcrumb a { color: #6d1a24; text-decoration: none; }
-  #breadcrumb a:hover { text-decoration: underline; }
-  #breadcrumb .sep { color: #a99; padding: 0 3px; }
-  #breadcrumb .here { color: #333; font-weight: bold; }
-
-  /* ---- Page frame -------------------------------------------------------- */
-  #page {
-    max-width: 47.5em;
-    margin: 18px auto 0;
-    background: #fbf9f2;
-    border: 1px solid #c9c0a8;
-    border-bottom: none;
-    padding: 22px 26px 8px;
-  }
-
+  #nav a { text-decoration: none; }
+  #nav a:hover { text-decoration: underline; }
+  #home { font-weight: bold; }
   #day-nav {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    color: #777;
-    border-bottom: 1px dotted #cbc3ad;
-    padding-bottom: 8px;
-    margin-bottom: 14px;
+    font-size: 85%;
+    color: #444;
+    margin: 0.6em 0 0;
     overflow: hidden;
   }
-  #day-nav a { color: #6d1a24; text-decoration: none; }
-  #day-nav a:hover { text-decoration: underline; }
-  #day-nav .prev { float: left; }
-  #day-nav .next { float: right; }
-
+  #day-nav .next-sitting-day { float: left; }
+  #day-nav .previous-sitting-day { float: right; }
+  #day-nav .label { color: #777; }
   h1.title {
-    font-size: 19px;
-    font-weight: bold;
-    margin: 0 0 2px;
-    color: #222;
-  }
-  .sitting-sub {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    color: #888;
-    margin: 0 0 14px;
+    font-size: 112%;
+    margin: 0.6em 0 0.2em;
   }
 
-  h2.section-title {
-    font-size: 16px;
-    letter-spacing: 0.03em;
-    border-bottom: 2px solid #6d1a24;
-    padding-bottom: 4px;
-    margin: 20px 0 4px;
-    color: #4a121a;
+  /* ---- Content ----------------------------------------------------------- */
+  #content {
+    padding-bottom: 1em;
+  }
+  h3#section-heading {
+    font-size: 105%;
+    margin: 1em 0 0.2em;
   }
   cite.section {
     display: block;
     font-style: normal;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    color: #8a8266;
-    margin: 0 0 16px;
+    font-weight: normal;
+    color: #666;
+    margin: 0 0 1em;
   }
 
-  /* ---- Contributions / speeches ----------------------------------------- */
-  .contribution {
-    position: relative;
-    margin: 0 0 15px;
-    padding-left: 4px;
+  /* Marginal column-number references — floated into the right margin, grey */
+  .section-column-reference {
+    color: #999;
+    float: right;
+    clear: both;
+    display: inline;
+    text-decoration: none;
+    font-weight: normal;
   }
-  .contribution blockquote {
-    margin: 0;
+  a.section-column-reference:hover { color: #666; }
+
+  .member_contribution { }
+  blockquote.contribution_text {
+    margin: 1em 0;
     padding: 0;
   }
-  .question_no {
-    font-weight: bold;
-    color: #444;
-    margin-right: 4px;
-  }
-  cite.member {
-    font-style: normal;
-    font-variant: small-caps;
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    color: #2a2a2a;
-  }
-  cite.member a { color: #2a2a2a; text-decoration: none; }
-  cite.member a:hover { text-decoration: underline; }
-  .contribution p { margin: 3px 0 0; }
-  .sect { color: #b28b3a; font-weight: bold; margin-right: 3px; }
-
-  /* Marginal column-number references (float into the right margin) */
-  .col-ref {
+  /* the § speech permalink floats to the right, like the real page */
+  a.permalink {
     float: right;
-    clear: right;
+    font-style: normal;
+    font-weight: normal;
+    clear: both;
+    padding-left: 1em;
     color: #999;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    margin-right: -20px;
-    margin-top: 2px;
     text-decoration: none;
   }
-  .col-ref:hover { color: #6d1a24; }
+  a.permalink:hover { color: #666; }
+  .question_no { font-weight: bold; }
+  cite {
+    font-style: normal;
+    font-weight: bold;
+  }
+  cite.member a { color: #000; text-decoration: none; }
+  cite.member a:hover { text-decoration: underline; }
+  /* first paragraph runs inline after the speaker's name, as on the real site */
+  p.first-para { display: inline; margin: 0; }
+  blockquote.contribution_text p { margin: 0.6em 0 0; }
 
-  /* ---- Section navigation ------------------------------------------------ */
   #section-navigation {
     overflow: hidden;
-    margin-top: 26px;
-    padding-top: 10px;
-    border-top: 1px dotted #cbc3ad;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    color: #777;
+    margin-top: 2em;
+    font-size: 90%;
   }
-  #section-navigation a { color: #6d1a24; text-decoration: none; }
-  #section-navigation a:hover { text-decoration: underline; }
-  #prev-section { float: left; }
+  #previous-section { float: left; }
   #next-section { float: right; text-align: right; }
+  #section-navigation a { text-decoration: none; }
+  #section-navigation a:hover { text-decoration: underline; }
 
   /* ---- Footer ------------------------------------------------------------ */
   #footer {
-    max-width: 47.5em;
-    margin: 0 auto;
-    background: #efe9db;
-    border: 1px solid #c9c0a8;
-    border-top: 1px solid #d8d0ba;
-    padding: 10px 26px 16px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 11px;
-    color: #777;
+    margin-top: 2.5em;
+    padding: 1em 0 2em;
+    border-top: 1px solid #ccc;
+    font-size: 85%;
+    color: #666;
   }
-  #footer .parl a { color: #6d1a24; text-decoration: none; }
-  #footer .parl a:hover { text-decoration: underline; }
+  #footer a { color: #1a4b8c; }
   #fab-notice {
-    margin-top: 12px;
-    padding: 8px 10px;
+    margin-top: 1em;
+    padding: 0.6em 0.8em;
     background: #fbf3d6;
     border: 1px solid #d9c98a;
     color: #6a5a25;
-    font-size: 10.5px;
+    font-size: 100%;
     line-height: 1.45;
-  }
-  #tail {
-    max-width: 47.5em;
-    margin: 8px auto 40px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 10px;
-    color: #9a927b;
-    padding: 0 18px;
-    text-align: center;
+    clear: both;
   }
 
   @media (max-width: 620px) {
-    #masthead-inner, #subnav-inner, #page, #footer, #tail { max-width: 100%; }
-    #brand { font-size: 24px; }
-    #search { position: static; margin: 8px 0 0; }
-    #search input[type="text"] { width: 60%; }
-    .col-ref { margin-right: 0; }
-    #page { padding: 18px 16px 8px; }
+    #header, #content, #footer { width: auto; margin: 0; padding-left: 12px; padding-right: 12px; }
+    #search { float: none; margin: 0.4em 0; }
+    #search input.query { width: 60%; }
+    .search-help { text-align: left; }
+    #day-nav .next-sitting-day,
+    #day-nav .previous-sitting-day { float: none; display: block; }
+    .section-column-reference { float: right; }
   }
 </style>
 </head>
 <body id="hansard-fabricated-exhibit">
 
-  <!-- ===================== MASTHEAD ===================== -->
-  <div id="masthead">
-    <div id="masthead-inner">
-      <form id="search" action="#" onsubmit="return false;" role="search" aria-label="Search (non-functional exhibit chrome)">
-        <input type="text" name="query" placeholder="Search Hansard" aria-label="Search Hansard" autocomplete="off">
-        <button type="submit" class="btn">Search</button>
-      </form>
-      <p id="brand">Historic <span class="flourish">Hansard</span></p>
-      <p id="tagline">Hansard 1803&ndash;2005 &middot; The Official Report</p>
-    </div>
-  </div>
+  <!-- ===================== HEADER ===================== -->
+  <div id="header">
+    <div class="search-help"><a href="#">Search Help</a></div>
 
-  <!-- ===================== BREADCRUMB ===================== -->
-  <div id="subnav">
-    <div id="subnav-inner">
-      <div id="breadcrumb">
-        <a href="#">HANSARD 1803&ndash;2005</a>
-        <span class="sep">&rsaquo;</span>
-        <a href="#">House of Commons</a>
-        <span class="sep">&rsaquo;</span>
-        <a href="#">1926</a>
-        <span class="sep">&rsaquo;</span>
-        <a href="#">March</a>
-        <span class="sep">&rsaquo;</span>
-        <a href="#">9</a>
-        <span class="sep">&rsaquo;</span>
-        <span class="here">ELEMENTARY EDUCATION (READING STANDARDS)</span>
-      </div>
-    </div>
-  </div>
+    <form id="search" action="#" onsubmit="return false;" role="search" aria-label="Search (non-functional exhibit chrome)">
+      <input class="query" type="text" name="query" placeholder="Search Hansard" aria-label="Search Hansard" autocomplete="off">
+      <input class="submit" type="submit" value="Search">
+    </form>
 
-  <!-- ===================== MAIN READING COLUMN ===================== -->
-  <div id="page">
+    <div id="nav">
+      <a id="home" href="#" rel="home">HANSARD 1803&ndash;2005</a>
+      &rarr;
+      <a href="#">1920s</a>
+      &rarr;
+      <a href="#">1926</a>
+      &rarr;
+      <a href="#">March 1926</a>
+      &rarr;
+      <a href="#">9 March 1926</a>
+      &rarr;
+      <a href="#">ELEMENTARY EDUCATION (READING STANDARDS)</a>
+    </div>
 
     <p id="day-nav">
-      <span class="prev">&lsaquo; Previous &nbsp;<a href="#">RURAL SCHOOLS (STAFFING).</a></span>
-      <span class="next"><a href="#">JUVENILE EMPLOYMENT.</a>&nbsp; Next &rsaquo;</span>
+      <span class="next-sitting-day"><span class="label">Next sitting day</span>
+        <a href="#">March 10, 1926</a></span>
+      <span class="previous-sitting-day"><span class="label">Previous sitting day</span>
+        <a href="#">March&nbsp;&nbsp;8, 1926</a></span>
     </p>
 
-    <h1 class="title">ELEMENTARY EDUCATION (READING STANDARDS).</h1>
-    <p class="sitting-sub">HC Deb Commons Sitting of 9 March 1926 &mdash; Series 5 Vol. 192</p>
+    <h1 class="title">Commons Sitting of 9 March 1926</h1>
+  </div>
 
-    <h2 class="section-title">ELEMENTARY EDUCATION (READING STANDARDS).</h2>
+  <!-- ===================== CONTENT ===================== -->
+  <div id="content">
+
+    <h3 id="section-heading">ELEMENTARY EDUCATION (READING STANDARDS).</h3>
     <cite class="section">HC Deb 09 March 1926 vol 192 cc2103-4</cite>
 
-    <!-- column 2103 begins -->
-    <a class="col-ref" href="#" title="Column 2103">2103</a>
+    <!-- column 2103 -->
+    <a class="section-column-reference" href="#" title="Column 2103">2103</a>
 
-    <div class="contribution">
-      <blockquote>
-        <span class="sect">&sect;</span>
+    <div class="hentry member_contribution">
+      <blockquote class="contribution_text entry-content">
+        <a class="permalink" href="#" title="Link to this speech" rel="bookmark">&sect;</a>
         <span class="question_no">42.</span>
-        <cite class="member"><a href="#">Mr. PETHERBRIDGE</a></cite>
-        <p>
-          asked the President of the Board of Education whether he is satisfied that standards of
-          reading among elementary schoolchildren in the northern counties are satisfactory; and
-          what steps are being taken to that end.
-        </p>
+        <cite class="member author entry-title"><a href="#" title="Mr Petherbridge">Mr. PETHERBRIDGE</a></cite>
+        <p class="first-para">asked the President of the Board of Education whether he is satisfied that
+          standards of reading among elementary schoolchildren in the northern counties are
+          satisfactory; and what steps are being taken to that end.</p>
       </blockquote>
     </div>
 
-    <div class="contribution">
-      <blockquote>
-        <span class="sect">&sect;</span>
-        <cite class="member"><a href="#">The PRESIDENT of the BOARD of EDUCATION</a></cite>
-        <p>
-          I am aware of the figures to which my hon. Friend refers. The matter is under review.
-        </p>
+    <div class="hentry member_contribution">
+      <blockquote class="contribution_text entry-content">
+        <a class="permalink" href="#" title="Link to this speech" rel="bookmark">&sect;</a>
+        <cite class="member author entry-title"><a href="#" title="The President of the Board of Education">The PRESIDENT of the BOARD of EDUCATION</a></cite>
+        <p class="first-para">I am aware of the figures to which my hon. Friend refers. The matter is
+          under review.</p>
       </blockquote>
     </div>
 
     <!-- column break 2103 -> 2104 -->
-    <a class="col-ref" href="#" title="Column 2104">2104</a>
+    <a class="section-column-reference" href="#" title="Column 2104">2104</a>
 
-    <div class="contribution">
-      <blockquote>
-        <span class="sect">&sect;</span>
-        <cite class="member"><a href="#">Mr. PETHERBRIDGE</a></cite>
-        <p>
-          Is the right hon. Gentleman aware that the position in Durham has not improved since 1921,
-          and can he say which Department is now seised of the question?
-        </p>
+    <div class="hentry member_contribution">
+      <blockquote class="contribution_text entry-content">
+        <a class="permalink" href="#" title="Link to this speech" rel="bookmark">&sect;</a>
+        <cite class="member author entry-title"><a href="#" title="Mr Petherbridge">Mr. PETHERBRIDGE</a></cite>
+        <p class="first-para">Is the right hon. Gentleman aware that the position in Durham has not
+          improved since 1921, and can he say which Department is now seised of the question?</p>
       </blockquote>
     </div>
 
-    <div class="contribution">
-      <blockquote>
-        <span class="sect">&sect;</span>
-        <cite class="member"><a href="#">The PRESIDENT of the BOARD of EDUCATION</a></cite>
-        <p>
-          I would not accept the hon. Member's figures. As to the second part of the Question, I
-          must ask for notice.
-        </p>
+    <div class="hentry member_contribution">
+      <blockquote class="contribution_text entry-content">
+        <a class="permalink" href="#" title="Link to this speech" rel="bookmark">&sect;</a>
+        <cite class="member author entry-title"><a href="#" title="The President of the Board of Education">The PRESIDENT of the BOARD of EDUCATION</a></cite>
+        <p class="first-para">I would not accept the hon. Member's figures. As to the second part of
+          the Question, I must ask for notice.</p>
       </blockquote>
     </div>
 
     <div id="section-navigation">
-      <div id="prev-section">Back to
+      <div id="previous-section">Back to
         <a href="#" rel="prev">RURAL SCHOOLS (STAFFING).</a>
       </div>
       <div id="next-section">Forward to
@@ -370,10 +282,10 @@
 
   <!-- ===================== FOOTER ===================== -->
   <div id="footer">
-    <p class="parl">
-      <a href="#">Noticed a typo?</a> &nbsp;|&nbsp;
-      <a href="#">Report other issues</a> &nbsp;|&nbsp;
-      <a href="#" rel="license">&copy; UK Parliament / Open Parliament Licence</a>
+    <p>
+      <a href="#">Noticed a typo?</a> |
+      <a href="#">Report other issues</a> |
+      <a href="#" rel="copyright" id="copyright">&copy; UK Parliament</a>
     </p>
     <div id="fab-notice">
       <strong>Fabricated exhibit.</strong> This is not a real parliamentary record. It is an
@@ -382,9 +294,6 @@
       Member named &ldquo;Petherbridge,&rdquo; and the citation, columns and volume are fiction.
     </div>
   </div>
-
-  <p id="tail">Out-of-world teaching exhibit &middot; original markup, not copied from any archive
-  &middot; Conspiracy LARP guide.</p>
 
 </body>
 </html>
